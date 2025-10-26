@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Collection - Cookie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .grayscale-img {
+      filter: grayscale(100%);
+    }
+    .grayscale-img:hover {
+      filter: grayscale(0%);
+      transition: filter 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-white text-black font-sans">
+  
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-200">
+    <div class="flex items-center justify-between px-4 md:px-8 py-4">
+      <button id="menuToggle" class="md:hidden">
+        <svg id="menuIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="closeIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      
+      <nav class="hidden space-x-8 text-sm tracking-wider md:flex">
+          <a href="women.html" class="hover:opacity-60">WOMEN</a>
+            <a href="men.html" class="hover:opacity-60 font-bold underline underline-offset-2">MEN</a>
+          <a href="about.html" class="hover:opacity-60">ABOUT</a>
+        </nav>
+
+      <h1 class="text-2xl md:text-3xl font-bold tracking-tight absolute left-1/2 transform -translate-x-1/2">
+        <a href="index.html">COOKIE</a>
+      </h1>
+
+      <nav class="hidden md:flex space-x-8 text-sm tracking-wider">
+        <a href="#" class="hover:opacity-60">STORES</a>
+        <a href="#" class="hover:opacity-60">CART</a>
+      </nav>
+
+      <div class="md:hidden w-8"></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
+      <nav class="flex flex-col p-4 space-y-4 text-sm tracking-wider">
+        <a href="#" class="hover:opacity-60 py-2">WOMEN</a>
+        <a href="#" class="hover:opacity-60 py-2 font-bold">MEN</a>
+        <a href="#" class="hover:opacity-60 py-2">ABOUT</a>
+        <a href="#" class="hover:opacity-60 py-2">STORES</a>
+        <a href="#" class="hover:opacity-60 py-2">CART</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="mt-16 md:mt-20">
+    <div class="relative w-full h-[40vh] md:h-[50vh]">
+      <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=1920&h=1080&fit=crop" alt="Men's Collection" class="w-full h-full object-cover grayscale-img">
+      
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+        <div class="text-center text-white">
+          <h2 class="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-4">
+            MEN'S COLLECTION
+          </h2>
+          <p class="text-sm md:text-base tracking-widest">TIMELESS ESSENTIALS FOR THE MODERN MAN</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="px-4 md:px-8 py-12 md:py-16">
+    
+    <!-- Breadcrumb -->
+    <div class="mb-6">
+      <p class="text-xs tracking-wider text-gray-500">HOME / <span class="text-black font-bold">MEN</span></p>
+    </div>
+
+    <!-- Search and Filter Bar -->
+    <div class="mb-8 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+      <div class="relative w-full md:w-96">
+        <input 
+          type="text" 
+          id="searchInput"
+          placeholder="SEARCH PRODUCTS..." 
+          class="w-full px-4 py-3 pr-10 border border-gray-300 text-sm tracking-wider focus:outline-none focus:border-black"
+        >
+        <svg class="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
+
+      <div class="flex gap-2 items-center w-full md:w-auto">
+        <span class="text-xs tracking-wider text-gray-600">SORT BY:</span>
+        <select id="sortSelect" class="flex-1 md:flex-none px-4 py-2 border border-gray-300 text-xs tracking-wider focus:outline-none focus:border-black">
+          <option>FEATURED</option>
+          <option>PRICE: LOW TO HIGH</option>
+          <option>PRICE: HIGH TO LOW</option>
+          <option>NEWEST</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="mb-8">
+      <h3 class="text-sm font-bold tracking-wider mb-4">CATEGORIES</h3>
+      <div class="flex flex-wrap gap-2">
+        <button class="category-filter px-4 py-2 text-xs tracking-wider border bg-black text-white border-black" data-category="all">ALL</button>
+        <button class="category-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-category="outerwear">OUTERWEAR</button>
+        <button class="category-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-category="shirts">SHIRTS</button>
+        <button class="category-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-category="knitwear">KNITWEAR</button>
+        <button class="category-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-category="trousers">TROUSERS</button>
+        <button class="category-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-category="accessories">ACCESSORIES</button>
+      </div>
+    </div>
+
+    <!-- Collection Filters -->
+    <div class="mb-8">
+      <h3 class="text-sm font-bold tracking-wider mb-4">COLLECTIONS</h3>
+      <div class="flex flex-wrap gap-2">
+        <button class="collection-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-collection="all">ALL COLLECTIONS</button>
+        <button class="collection-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-collection="fall">FALL 25/26</button>
+        <button class="collection-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-collection="winter">WINTER 25/26</button>
+        <button class="collection-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-collection="spring">SPRING 25/26</button>
+        <button class="collection-filter px-4 py-2 text-xs tracking-wider border border-gray-300 hover:border-black" data-collection="summer">SUMMER 25/26</button>
+      </div>
+    </div>
+
+    <!-- Product Count -->
+    <div class="mb-6 flex justify-between items-center">
+      <p class="text-sm text-gray-600"><span id="productCount">48</span> Products</p>
+      <div class="flex gap-2">
+        <button id="gridView3" class="p-2 border border-gray-300 hover:border-black">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"/><rect x="13" y="3" width="7" height="7"/><rect x="3" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/>
+          </svg>
+        </button>
+        <button id="gridView4" class="p-2 border border-black">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="16" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/><rect x="16" y="9" width="5" height="5"/><rect x="2" y="16" width="5" height="5"/><rect x="9" y="16" width="5" height="5"/><rect x="16" y="16" width="5" height="5"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
+      <!-- Products will be rendered here -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center items-center gap-2 flex-wrap">
+      <button id="prevPage" class="px-4 py-2 border border-gray-300 text-xs tracking-wider hover:border-black disabled:opacity-30 disabled:cursor-not-allowed">
+        PREV
+      </button>
+      <div id="pageNumbers" class="flex gap-2 flex-wrap justify-center">
+        <!-- Page numbers will be rendered here -->
+      </div>
+      <button id="nextPage" class="px-4 py-2 border border-gray-300 text-xs tracking-wider hover:border-black disabled:opacity-30 disabled:cursor-not-allowed">
+        NEXT
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-4 md:px-8 py-12 border-t border-gray-200 bg-gray-50">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+      <div>
+        <h4 class="text-xs font-bold mb-4 tracking-wider">CUSTOMER CARE</h4>
+        <ul class="space-y-2 text-xs text-gray-600">
+          <li><a href="#" class="hover:text-black">Contact Us</a></li>
+          <li><a href="#" class="hover:text-black">Shipping Info</a></li>
+          <li><a href="#" class="hover:text-black">Returns</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold mb-4 tracking-wider">COMPANY</h4>
+        <ul class="space-y-2 text-xs text-gray-600">
+          <li><a href="#" class="hover:text-black">About Us</a></li>
+          <li><a href="#" class="hover:text-black">Careers</a></li>
+          <li><a href="#" class="hover:text-black">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold mb-4 tracking-wider">FOLLOW US</h4>
+        <ul class="space-y-2 text-xs text-gray-600">
+          <li><a href="#" class="hover:text-black">Instagram</a></li>
+          <li><a href="#" class="hover:text-black">Facebook</a></li>
+          <li><a href="#" class="hover:text-black">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-16 h-20 bg-gray-200"></div>
+        <div class="w-16 h-20 bg-gray-200"></div>
+        <div class="w-16 h-20 bg-gray-200"></div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <h2 class="text-4xl md:text-8xl font-black tracking-tighter leading-none">
+        COOKIE
+      </h2>
+      <p class="text-xs tracking-widest mt-4 text-gray-600">
+        © 2025 COOKIE. ALL RIGHTS RESERVED.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Product Data
+    const allProducts = [
+      { id: 1, name: 'Wool Overcoat', category: 'outerwear', collection: 'fall', price: 299, img: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=500&fit=crop' },
+      { id: 2, name: 'Leather Jacket', category: 'outerwear', collection: 'winter', price: 399, img: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=500&fit=crop' },
+      { id: 3, name: 'Oxford Shirt', category: 'shirts', collection: 'spring', price: 89, img: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=500&fit=crop' },
+      { id: 4, name: 'Cashmere Sweater', category: 'knitwear', collection: 'winter', price: 179, img: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop' },
+      { id: 5, name: 'Tailored Trousers', category: 'trousers', collection: 'fall', price: 129, img: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=500&fit=crop' },
+      { id: 6, name: 'Denim Jacket', category: 'outerwear', collection: 'spring', price: 159, img: 'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?w=400&h=500&fit=crop' },
+      { id: 7, name: 'Linen Shirt', category: 'shirts', collection: 'summer', price: 79, img: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=500&fit=crop' },
+      { id: 8, name: 'Merino Cardigan', category: 'knitwear', collection: 'fall', price: 149, img: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=500&fit=crop' },
+      { id: 9, name: 'Chino Pants', category: 'trousers', collection: 'spring', price: 99, img: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=400&h=500&fit=crop' },
+      { id: 10, name: 'Leather Belt', category: 'accessories', collection: 'fall', price: 59, img: 'https://images.unsplash.com/photo-1664286074176-5206ee5dc878?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170' },
+      { id: 11, name: 'Bomber Jacket', category: 'outerwear', collection: 'fall', price: 189, img: 'https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?w=400&h=500&fit=crop' },
+      { id: 12, name: 'Flannel Shirt', category: 'shirts', collection: 'winter', price: 69, img: 'https://images.unsplash.com/photo-1698857494817-d244cb4231a8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171' },
+      { id: 13, name: 'Turtleneck', category: 'knitwear', collection: 'winter', price: 119, img: 'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=400&h=500&fit=crop' },
+      { id: 14, name: 'Dress Pants', category: 'trousers', collection: 'winter', price: 139, img: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=500&fit=crop' },
+      { id: 15, name: 'Wool Scarf', category: 'accessories', collection: 'winter', price: 79, img: 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=400&h=500&fit=crop' },
+      { id: 16, name: 'Parka Coat', category: 'outerwear', collection: 'winter', price: 279, img: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=500&fit=crop' },
+      { id: 17, name: 'Polo Shirt', category: 'shirts', collection: 'summer', price: 59, img: 'https://images.unsplash.com/photo-1626497764746-6dc36546b388?w=400&h=500&fit=crop' },
+      { id: 18, name: 'Cable Knit', category: 'knitwear', collection: 'fall', price: 159, img: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400&h=500&fit=crop' },
+      { id: 19, name: 'Cargo Pants', category: 'trousers', collection: 'spring', price: 109, img: 'https://images.unsplash.com/photo-1565084888279-aca607ecce0c?w=400&h=500&fit=crop' },
+      { id: 20, name: 'Leather Gloves', category: 'accessories', collection: 'winter', price: 69, img: 'https://images.unsplash.com/photo-1483118714900-540cf339fd46?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170' },
+      { id: 21, name: 'Puffer Vest', category: 'outerwear', collection: 'fall', price: 139, img: 'https://images.unsplash.com/photo-1649877720805-040ca401731c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170' },
+      { id: 22, name: 'Henley Shirt', category: 'shirts', collection: 'spring', price: 49, img: 'https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=400&h=500&fit=crop' },
+      { id: 23, name: 'V-Neck Sweater', category: 'knitwear', collection: 'fall', price: 129, img: 'https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?w=400&h=500&fit=crop' },
+      { id: 24, name: 'Jogger Pants', category: 'trousers', collection: 'spring', price: 89, img: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=500&fit=crop' },
+    ];
+
+    // State
+    let currentPage = 1;
+    let itemsPerPage = 12;
+    let currentCategory = 'all';
+    let currentCollection = 'all';
+    let searchQuery = '';
+    let sortBy = 'featured';
+    let gridColumns = 4;
+
+    // Get filtered products
+    function getFilteredProducts() {
+      let filtered = allProducts;
+
+      if (currentCategory !== 'all') {
+        filtered = filtered.filter(p => p.category === currentCategory);
+      }
+
+      if (currentCollection !== 'all') {
+        filtered = filtered.filter(p => p.collection === currentCollection);
+      }
+
+      if (searchQuery) {
+        filtered = filtered.filter(p => 
+          p.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+      }
+
+      if (sortBy === 'price-low') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (sortBy === 'price-high') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (sortBy === 'newest') {
+        filtered.sort((a, b) => b.id - a.id);
+      }
+
+      return filtered;
+    }
+
+    // Render products
+    function renderProducts() {
+      const filtered = getFilteredProducts();
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const productsToShow = filtered.slice(start, end);
+
+      const grid = document.getElementById('productsGrid');
+      const gridClass = gridColumns === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
+      grid.className = `grid ${gridClass} gap-4 md:gap-6 mb-12`;
+      
+      grid.innerHTML = productsToShow.map(product => `
+        <div class="group cursor-pointer">
+          <div class="bg-gray-100 mb-3 overflow-hidden">
+            <img src="${product.img}" alt="${product.name}" class="w-full h-64 md:h-80 object-cover grayscale-img group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <h3 class="text-sm font-bold mb-1">${product.name}</h3>
+          <p class="text-xs text-gray-600 mb-1">${product.category.toUpperCase()}</p>
+          <p class="text-xs font-bold">GBP ${product.price}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('productCount').textContent = filtered.length;
+      renderPagination(filtered.length);
+    }
+
+    // Render pagination
+    function renderPagination(totalItems) {
+      const totalPages = Math.ceil(totalItems / itemsPerPage);
+      const pageNumbers = document.getElementById('pageNumbers');
+      
+      pageNumbers.innerHTML = '';
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        btn.className = `px-3 py-2 text-xs tracking-wider border ${i === currentPage ? 'bg-black text-white border-black' : 'border-gray-300 hover:border-black'}`;
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          renderProducts();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        pageNumbers.appendChild(btn);
+      }
+
+      document.getElementById('prevPage').disabled = currentPage === 1;
+      document.getElementById('nextPage').disabled = currentPage === totalPages;
+    }
+
+    // Category filters
+    document.querySelectorAll('.category-filter').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.category-filter').forEach(b => {
+          b.classList.remove('bg-black', 'text-white');
+          b.classList.add('border-gray-300');
+        });
+        this.classList.add('bg-black', 'text-white');
+        this.classList.remove('border-gray-300');
+        
+        currentCategory = this.dataset.category;
+        currentPage = 1;
+        renderProducts();
+      });
+    });
+
+    // Collection filters
+    document.querySelectorAll('.collection-filter').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.collection-filter').forEach(b => {
+          b.classList.remove('bg-black', 'text-white');
+          b.classList.add('border-gray-300');
+        });
+        this.classList.add('bg-black', 'text-white');
+        this.classList.remove('border-gray-300');
+        
+        currentCollection = this.dataset.collection;
+        currentPage = 1;
+        renderProducts();
+      });
+    });
+
+    // Search
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      searchQuery = e.target.value;
+      currentPage = 1;
+      renderProducts();
+    });
+
+    // Sort
+    document.getElementById('sortSelect').addEventListener('change', function(e) {
+      const val = e.target.value;
+      if (val === 'PRICE: LOW TO HIGH') sortBy = 'price-low';
+      else if (val === 'PRICE: HIGH TO LOW') sortBy = 'price-high';
+      else if (val === 'NEWEST') sortBy = 'newest';
+      else sortBy = 'featured';
+      
+      currentPage = 1;
+      renderProducts();
+    });
+
+    // Grid view toggle
+    document.getElementById('gridView3').addEventListener('click', function() {
+      gridColumns = 3;
+      document.getElementById('gridView3').classList.add('border-black');
+      document.getElementById('gridView3').classList.remove('border-gray-300');
+      document.getElementById('gridView4').classList.remove('border-black');
+      document.getElementById('gridView4').classList.add('border-gray-300');
+      renderProducts();
+    });
+
+    document.getElementById('gridView4').addEventListener('click', function() {
+      gridColumns = 4;
+      document.getElementById('gridView4').classList.add('border-black');
+      document.getElementById('gridView4').classList.remove('border-gray-300');
+      document.getElementById('gridView3').classList.remove('border-black');
+      document.getElementById('gridView3').classList.add('border-gray-300');
+      renderProducts();
+    });
+
+    // Pagination
+    document.getElementById('prevPage').addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderProducts();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    document.getElementById('nextPage').addEventListener('click', () => {
+      const totalPages = Math.ceil(getFilteredProducts().length / itemsPerPage);
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderProducts();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    // Initial render
+    renderProducts();
+  </script>
+</body>
+</html>

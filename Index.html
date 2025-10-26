@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie & Biscuits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .grayscale-img {
+        filter: grayscale(100%);
+      }
+      .grayscale-img:hover {
+        filter: grayscale(0%);
+        transition: filter 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-white font-sans text-black">
+    <!-- Header -->
+    <header class="fixed top-0 right-0 left-0 z-50 border-b border-gray-200 bg-white">
+      <div class="flex items-center justify-between px-4 py-4 md:px-8">
+        <button id="menuToggle" class="md:hidden">
+          <svg id="menuIcon" class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="closeIcon" class="hidden h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <nav class="hidden space-x-8 text-sm tracking-wider md:flex">
+          <a href="women.html" class="hover:opacity-60">WOMEN</a>
+          <a href="men.html" class="hover:opacity-60">MEN</a>
+          <a href="about.html" class="hover:opacity-60">ABOUT</a>
+        </nav>
+
+        <h1 class="absolute left-1/2 -translate-x-1/2 transform text-2xl font-bold tracking-tight md:text-3xl">COOKIE</h1>
+
+        <nav class="hidden space-x-8 text-sm tracking-wider md:flex">
+          <a href="#" class="hover:opacity-60">STORES</a>
+          <a href="#" class="hover:opacity-60">CART</a>
+        </nav>
+
+        <div class="w-8 md:hidden"></div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden border-t border-gray-200 bg-white shadow-lg md:hidden">
+        <nav class="flex flex-col space-y-4 p-4 text-sm tracking-wider">
+          <a href="#" class="py-2 hover:opacity-60">WOMEN</a>
+          <a href="#" class="py-2 hover:opacity-60">MEN</a>
+          <a href="#" class="py-2 hover:opacity-60">ABOUT</a>
+          <a href="#" class="py-2 hover:opacity-60">STORES</a>
+          <a href="#" class="py-2 hover:opacity-60">CART</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="mt-16 md:mt-20">
+      <div class="relative h-[60vh] w-full md:h-[80vh]">
+        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=500&fit=crop" alt="Fashion Hero" class="grayscale-img h-full w-full object-cover" />
+
+        <div class="absolute right-4 bottom-8 left-4 md:right-8 md:left-8">
+          <h2 class="text-6xl leading-none font-black tracking-tighter text-black md:text-9xl">COOKIE</h2>
+          <p class="mt-2 text-xs tracking-widest text-white md:absolute md:right-0 md:bottom-0 md:text-sm">FALL/WINTER</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="px-4 py-12 md:px-8 md:py-20">
+      <div class="mb-8 flex items-center justify-between">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">NEW ARRIVALS</h2>
+        <a href="#" class="flex items-center text-xs tracking-wider hover:opacity-60 md:text-sm">
+          VIEW ALL
+          <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-5">
+        <div class="group cursor-pointer">
+          <div class="mb-3 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=500&fit=crop" alt="Hoodie" class="grayscale-img h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:h-80" />
+          </div>
+          <h3 class="mb-1 text-sm font-bold">HOODIE</h3>
+          <p class="text-xs text-gray-600">OVERSIZED BLACK HOODIE - GBP 89</p>
+        </div>
+
+        <div class="group cursor-pointer">
+          <div class="mb-3 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=500&fit=crop" alt="Jacket" class="grayscale-img h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:h-80" />
+          </div>
+          <h3 class="mb-1 text-sm font-bold">JACKET</h3>
+          <p class="text-xs text-gray-600">PUFFER JACKET - GBP 129</p>
+        </div>
+
+        <div class="group cursor-pointer">
+          <div class="mb-3 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=500&fit=crop" alt="Coat" class="grayscale-img h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:h-80" />
+          </div>
+          <h3 class="mb-1 text-sm font-bold">COAT</h3>
+          <p class="text-xs text-gray-600">WOOL BLEND COAT - GBP 199</p>
+        </div>
+
+        <div class="group cursor-pointer">
+          <div class="mb-3 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=500&fit=crop" alt="Cardigan" class="grayscale-img h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:h-80" />
+          </div>
+          <h3 class="mb-1 text-sm font-bold">CARDIGAN</h3>
+          <p class="text-xs text-gray-600">KNIT CARDIGAN - GBP 79</p>
+        </div>
+
+        <div class="group cursor-pointer">
+          <div class="mb-3 overflow-hidden bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?w=400&h=500&fit=crop" alt="Bomber" class="grayscale-img h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:h-80" />
+          </div>
+          <h3 class="mb-1 text-sm font-bold">BOMBER</h3>
+          <p class="text-xs text-gray-600">BOMBER JACKET - GBP 149</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="bg-gray-50 px-4 py-12 md:px-8 md:py-20">
+      <div class="mb-8 flex items-center justify-between">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">ABOUT US</h2>
+        <a href="#" class="text-xs tracking-wider hover:opacity-60 md:text-sm">DISCOVER MORE</a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=400&h=600&fit=crop" alt="About" class="grayscale-img h-80 w-full object-cover md:h-96" />
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=600&fit=crop" alt="About" class="grayscale-img h-80 w-full object-cover md:h-96" />
+        <div class="flex flex-col justify-between">
+          <div>
+            <p class="mb-4 text-xs tracking-wider uppercase md:text-sm">Timeless pieces that transcend seasons</p>
+            <p class="mb-6 text-xs leading-relaxed text-gray-600 md:text-sm">Cookie is a celebration of minimalist design and exceptional craftsmanship. Each piece is thoughtfully created to exist beyond trends.</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&h=400&fit=crop" alt="About" class="grayscale-img mt-4 h-48 w-full object-cover md:h-64" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="px-4 py-12 md:px-8 md:py-20">
+      <h2 class="mb-8 text-3xl font-bold tracking-tight md:text-4xl">COLLECTIONS</h2>
+
+      <div class="mb-8 flex flex-wrap gap-2">
+        <button class="border border-black bg-black px-4 py-2 text-xs tracking-wider text-white">ALL</button>
+        <button class="border border-gray-300 px-4 py-2 text-xs tracking-wider hover:border-black">WOMEN</button>
+        <button class="border border-gray-300 px-4 py-2 text-xs tracking-wider hover:border-black">MEN</button>
+        <button class="border border-gray-300 px-4 py-2 text-xs tracking-wider hover:border-black">LATEST</button>
+        <button class="border border-gray-300 px-4 py-2 text-xs tracking-wider hover:border-black">WINTER COLLECTION</button>
+        <button class="border border-gray-300 px-4 py-2 text-xs tracking-wider hover:border-black">SPRING COLLECTION</button>
+        <button class="border border-gray-300 px-4 py-2 text-xs tracking-wider hover:border-black">FALL COLLECTION</button>
+      </div>
+
+      <div class="space-y-6">
+        <div class="grid grid-cols-1 items-center gap-4 border-t border-gray-200 pt-6 md:grid-cols-3">
+          <div>
+            <h3 class="mb-1 text-xl font-bold md:text-2xl">FALL 25/26</h3>
+          </div>
+          <div>
+            <p class="text-xs tracking-wider text-gray-600 md:text-sm">ELEVATED ESSENTIALS FOR THE MODERN WARDROBE</p>
+          </div>
+          <div class="flex justify-end">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=500&fit=crop" alt="Fall" class="grayscale-img h-64 w-full object-cover md:w-48" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 items-center gap-4 border-t border-gray-200 pt-6 md:grid-cols-3">
+          <div>
+            <h3 class="mb-1 text-xl font-bold md:text-2xl">WINTER 25/26</h3>
+          </div>
+          <div>
+            <p class="text-xs tracking-wider text-gray-600 md:text-sm">LUXURIOUS LAYERS, TIMELESS SILHOUETTES</p>
+          </div>
+          <div class="flex justify-end">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=500&fit=crop" alt="Winter" class="grayscale-img h-64 w-full object-cover md:w-48" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 items-center gap-4 border-t border-gray-200 pt-6 md:grid-cols-3">
+          <div>
+            <h3 class="mb-1 text-xl font-bold md:text-2xl">SPRING 25/26</h3>
+          </div>
+          <div>
+            <p class="text-xs tracking-wider text-gray-600 md:text-sm">CLASSIC SHAPES REIMAGINED IN MONOCHROME</p>
+          </div>
+          <div class="flex justify-end">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=500&fit=crop" alt="Spring" class="grayscale-img h-64 w-full object-cover md:w-48" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 items-center gap-4 border-t border-gray-200 pt-6 md:grid-cols-3">
+          <div>
+            <h3 class="mb-1 text-xl font-bold md:text-2xl">SUMMER 25/26</h3>
+          </div>
+          <div>
+            <p class="text-xs tracking-wider text-gray-600 md:text-sm">MINIMALIST DESIGNS WITH MAXIMUM IMPACT</p>
+          </div>
+          <div class="flex justify-end">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=500&fit=crop" alt="Summer" class="grayscale-img h-64 w-full object-cover md:w-48" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeless Section -->
+    <section class="px-4 py-12 md:px-8 md:py-20">
+      <div class="mb-8 grid grid-cols-2 gap-4">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=500&fit=crop" alt="Timeless" class="grayscale-img h-48 w-full object-cover md:h-80" />
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=500&fit=crop" alt="Timeless" class="grayscale-img h-48 w-full object-cover md:h-80" />
+      </div>
+
+      <h2 class="text-center text-5xl leading-none font-black tracking-tighter md:text-9xl">TIMELESS</h2>
+
+      <div class="mt-8 grid grid-cols-2 gap-4">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=500&fit=crop" alt="Timeless" class="grayscale-img h-48 w-full object-cover md:h-80" />
+        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=500&fit=crop" alt="Timeless" class="grayscale-img h-48 w-full object-cover md:h-80" />
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-gray-50 px-4 py-12 md:px-8 md:py-20">
+      <h2 class="mb-8 text-3xl font-bold tracking-tight md:text-4xl">SUBSCRIBE TO NEWSLETTER</h2>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=500&fit=crop" alt="Newsletter" class="grayscale-img h-96 w-full object-cover md:h-[500px]" />
+
+        <div class="flex flex-col justify-between">
+          <div>
+            <h3 class="mb-4 text-2xl font-bold md:text-3xl">VERSATILITY PERSONALITY</h3>
+            <p class="mb-6 text-sm leading-relaxed text-gray-600">Stay updated with our latest collections, exclusive offers, and style inspiration. Join our community of fashion enthusiasts.</p>
+
+            <div class="space-y-4">
+              <input type="email" id="emailInput" placeholder="YOUR EMAIL ADDRESS" class="w-full border border-gray-300 px-4 py-3 text-sm tracking-wider focus:border-black focus:outline-none" />
+              <button id="subscribeBtn" class="w-full bg-black px-6 py-3 text-sm tracking-wider text-white transition-colors hover:bg-gray-800">SUBSCRIBE</button>
+            </div>
+          </div>
+
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop" alt="Newsletter" class="grayscale-img mt-8 h-64 w-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 px-4 py-12 md:px-8">
+      <div class="mb-12 grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div>
+          <h4 class="mb-4 text-xs font-bold tracking-wider">CUSTOMER CARE</h4>
+          <ul class="space-y-2 text-xs text-gray-600">
+            <li><a href="#" class="hover:text-black">Contact Us</a></li>
+            <li><a href="#" class="hover:text-black">Shipping Info</a></li>
+            <li><a href="#" class="hover:text-black">Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-4 text-xs font-bold tracking-wider">COMPANY</h4>
+          <ul class="space-y-2 text-xs text-gray-600">
+            <li><a href="#" class="hover:text-black">About Us</a></li>
+            <li><a href="#" class="hover:text-black">Careers</a></li>
+            <li><a href="#" class="hover:text-black">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-4 text-xs font-bold tracking-wider">FOLLOW US</h4>
+          <ul class="space-y-2 text-xs text-gray-600">
+            <li><a href="#" class="hover:text-black">Instagram</a></li>
+            <li><a href="#" class="hover:text-black">Facebook</a></li>
+            <li><a href="#" class="hover:text-black">Twitter</a></li>
+          </ul>
+        </div>
+        <div class="flex gap-4">
+          <div class="h-20 w-16 bg-gray-200"></div>
+          <div class="h-20 w-16 bg-gray-200"></div>
+          <div class="h-20 w-16 bg-gray-200"></div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <h2 class="text-4xl leading-none font-black tracking-tighter md:text-9xl">COOKIE</h2>
+        <p class="mt-4 text-xs tracking-widest text-gray-600">© 2025 COOKIE. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      const closeIcon = document.getElementById('closeIcon');
+
+      menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      // Newsletter subscription
+      const subscribeBtn = document.getElementById('subscribeBtn');
+      const emailInput = document.getElementById('emailInput');
+
+      subscribeBtn.addEventListener('click', function() {
+        if (emailInput.value) {
+          alert('Thank you for subscribing!');
+          emailInput.value = '';
+        } else {
+          alert('Please enter your email address');
+        }
+      });
+    </script>
+  </body>
+</html>

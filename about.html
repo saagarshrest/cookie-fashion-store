@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Cookie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .grayscale-img {
+      filter: grayscale(100%);
+    }
+    .grayscale-img:hover {
+      filter: grayscale(0%);
+      transition: filter 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-white text-black font-sans">
+  
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-200">
+    <div class="flex items-center justify-between px-4 md:px-8 py-4">
+      <button id="menuToggle" class="md:hidden">
+        <svg id="menuIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="closeIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      
+      <nav class="hidden md:flex space-x-8 text-sm tracking-wider">
+        <a href="women.html" class="hover:opacity-60">WOMEN</a>
+        <a href="men.html" class="hover:opacity-60">MEN</a>
+        <a href="about.html" class="hover:opacity-60 font-bold">ABOUT</a>
+      </nav>
+
+      <h1 class="text-2xl md:text-3xl font-bold tracking-tight absolute left-1/2 transform -translate-x-1/2">
+        <a href="index.html">COOKIE</a>
+      </h1>
+
+      <nav class="hidden md:flex space-x-8 text-sm tracking-wider">
+        <a href="#" class="hover:opacity-60">STORES</a>
+        <a href="#" class="hover:opacity-60">CART</a>
+      </nav>
+
+      <div class="md:hidden w-8"></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
+      <nav class="flex flex-col p-4 space-y-4 text-sm tracking-wider">
+        <a href="#" class="hover:opacity-60 py-2">WOMEN</a>
+        <a href="#" class="hover:opacity-60 py-2">MEN</a>
+        <a href="#" class="hover:opacity-60 py-2 font-bold">ABOUT</a>
+        <a href="#" class="hover:opacity-60 py-2">STORES</a>
+        <a href="#" class="hover:opacity-60 py-2">CART</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="mt-16 md:mt-20">
+    <div class="relative w-full h-[50vh] md:h-[70vh]">
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop" alt="About Cookie" class="w-full h-full object-cover grayscale-img">
+      
+      <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+        <div class="text-center text-white px-4">
+          <h2 class="text-6xl md:text-9xl font-black tracking-tighter leading-none mb-4">
+            COOKIE
+          </h2>
+          <p class="text-sm md:text-lg tracking-widest">TIMELESS DESIGN, EXCEPTIONAL CRAFTSMANSHIP</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="px-4 md:px-8 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-8">OUR STORY</h2>
+      <div class="space-y-6 text-base md:text-lg leading-relaxed text-gray-700">
+        <p>
+          Founded in 2020, Cookie was born from a simple belief: fashion should be timeless, not temporary. In a world of fast trends and disposable clothing, we set out to create pieces that transcend seasons and stand the test of time.
+        </p>
+        <p>
+          Our journey began in a small studio in London, where our founder envisioned a brand that celebrated minimalist design and exceptional quality. Today, Cookie has grown into a global brand, but our core philosophy remains unchanged.
+        </p>
+        <p>
+          Every piece we create is thoughtfully designed with versatility in mind. We believe in a curated wardrobe of essential pieces that can be mixed, matched, and worn for years to come. Quality over quantity, always.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="px-4 md:px-8 py-16 md:py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-12 text-center">OUR VALUES</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div>
+          <div class="mb-6">
+            <img src="https://images.unsplash.com/photo-1573227896778-8f378c4029d4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="Quality" class="w-full h-80 object-cover grayscale-img">
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-4">QUALITY</h3>
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+            We source the finest materials and work with skilled artisans to ensure every piece meets our exacting standards. From the first stitch to the final finish, quality is never compromised.
+          </p>
+        </div>
+
+        <div>
+          <div class="mb-6">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=500&fit=crop" alt="Sustainability" class="w-full h-80 object-cover grayscale-img">
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-4">SUSTAINABILITY</h3>
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+            We're committed to responsible fashion. Our production processes minimize waste, and we use sustainable materials wherever possible. Creating beautiful clothing shouldn't come at the planet's expense.
+          </p>
+        </div>
+
+        <div>
+          <div class="mb-6">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=500&fit=crop" alt="Timelessness" class="w-full h-80 object-cover grayscale-img">
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-4">TIMELESSNESS</h3>
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+            We don't chase trends. Our designs are classic, elegant, and built to last. A Cookie piece purchased today will be just as relevant and stylish a decade from now.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship -->
+  <section class="px-4 md:px-8 py-16 md:py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">CRAFTSMANSHIP</h2>
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+            Each Cookie garment is a testament to the art of fine tailoring. We partner with experienced craftspeople who share our passion for perfection, ensuring every seam, every button, every detail is executed flawlessly.
+          </p>
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+            Our atelier combines traditional techniques with modern innovation, resulting in pieces that honor heritage while embracing the future.
+          </p>
+          <p class="text-sm tracking-wider text-gray-600 uppercase">
+            Made with care, worn with pride
+          </p>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800&h=1000&fit=crop" alt="Craftsmanship" class="w-full h-[500px] md:h-[600px] object-cover grayscale-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="px-4 md:px-8 py-16 md:py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-12 text-center">OUR TEAM</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+        <div class="text-center">
+          <div class="mb-4">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Team Member" class="w-full h-80 object-cover grayscale-img">
+          </div>
+          <h3 class="text-lg font-bold mb-1">JAMES ANDERSON</h3>
+          <p class="text-xs tracking-wider text-gray-600">FOUNDER & CREATIVE DIRECTOR</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop" alt="Team Member" class="w-full h-80 object-cover grayscale-img">
+          </div>
+          <h3 class="text-lg font-bold mb-1">SOPHIA CHEN</h3>
+          <p class="text-xs tracking-wider text-gray-600">HEAD OF DESIGN</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop" alt="Team Member" class="w-full h-80 object-cover grayscale-img">
+          </div>
+          <h3 class="text-lg font-bold mb-1">MARCUS WILLIAMS</h3>
+          <p class="text-xs tracking-wider text-gray-600">PRODUCTION DIRECTOR</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mb-4">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="Team Member" class="w-full h-80 object-cover grayscale-img">
+          </div>
+          <h3 class="text-lg font-bold mb-1">EMMA TAYLOR</h3>
+          <p class="text-xs tracking-wider text-gray-600">SUSTAINABILITY LEAD</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="px-4 md:px-8 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-8">OUR PHILOSOPHY</h2>
+      <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8">
+        "Buy less, choose well, make it last."
+      </p>
+      <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+        This simple mantra guides everything we do. We believe in conscious consumption, in investing in pieces that will serve you for years, not months. Fashion should be an expression of who you are, not a fleeting statement of what's trending.
+      </p>
+    </div>
+  </section>
+
+  <!-- Visit Us -->
+  <section class="px-4 md:px-8 py-16 md:py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-12">VISIT US</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div>
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop" alt="London Store" class="w-full h-80 md:h-96 object-cover grayscale-img mb-6">
+          <h3 class="text-2xl font-bold mb-3">LONDON FLAGSHIP</h3>
+          <p class="text-sm text-gray-600 mb-2">123 King's Road, Chelsea</p>
+          <p class="text-sm text-gray-600 mb-2">London SW3 4PL, United Kingdom</p>
+          <p class="text-sm text-gray-600 mb-4">+44 20 1234 5678</p>
+          <p class="text-xs text-gray-500">Mon-Sat: 10:00-19:00 | Sun: 12:00-18:00</p>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=800&h=600&fit=crop" alt="New York Store" class="w-full h-80 md:h-96 object-cover grayscale-img mb-6">
+          <h3 class="text-2xl font-bold mb-3">NEW YORK STORE</h3>
+          <p class="text-sm text-gray-600 mb-2">456 Madison Avenue</p>
+          <p class="text-sm text-gray-600 mb-2">New York, NY 10022, USA</p>
+          <p class="text-sm text-gray-600 mb-4">+1 212 123 4567</p>
+          <p class="text-xs text-gray-500">Mon-Sat: 10:00-20:00 | Sun: 11:00-19:00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="px-4 md:px-8 py-16 md:py-24">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">STAY CONNECTED</h2>
+      <p class="text-base md:text-lg text-gray-600 mb-8">
+        Subscribe to our newsletter for exclusive updates, early access to new collections, and style inspiration.
+      </p>
+      
+      <div class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+        <input 
+          type="email" 
+          id="emailInput"
+          placeholder="YOUR EMAIL ADDRESS" 
+          class="flex-1 px-4 py-3 border border-gray-300 text-sm tracking-wider focus:outline-none focus:border-black"
+        >
+        <button 
+          id="subscribeBtn"
+          class="bg-black text-white px-8 py-3 text-sm tracking-wider hover:bg-gray-800 transition-colors"
+        >
+          SUBSCRIBE
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-4 md:px-8 py-12 border-t border-gray-200 bg-gray-50">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+      <div>
+        <h4 class="text-xs font-bold mb-4 tracking-wider">CUSTOMER CARE</h4>
+        <ul class="space-y-2 text-xs text-gray-600">
+          <li><a href="#" class="hover:text-black">Contact Us</a></li>
+          <li><a href="#" class="hover:text-black">Shipping Info</a></li>
+          <li><a href="#" class="hover:text-black">Returns</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold mb-4 tracking-wider">COMPANY</h4>
+        <ul class="space-y-2 text-xs text-gray-600">
+          <li><a href="#" class="hover:text-black">About Us</a></li>
+          <li><a href="#" class="hover:text-black">Careers</a></li>
+          <li><a href="#" class="hover:text-black">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold mb-4 tracking-wider">FOLLOW US</h4>
+        <ul class="space-y-2 text-xs text-gray-600">
+          <li><a href="#" class="hover:text-black">Instagram</a></li>
+          <li><a href="#" class="hover:text-black">Facebook</a></li>
+          <li><a href="#" class="hover:text-black">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-16 h-20 bg-gray-200"></div>
+        <div class="w-16 h-20 bg-gray-200"></div>
+        <div class="w-16 h-20 bg-gray-200"></div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <h2 class="text-4xl md:text-8xl font-black tracking-tighter leading-none">
+        COOKIE
+      </h2>
+      <p class="text-xs tracking-widest mt-4 text-gray-600">
+        © 2025 COOKIE. ALL RIGHTS RESERVED.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Newsletter subscription
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const emailInput = document.getElementById('emailInput');
+
+    subscribeBtn.addEventListener('click', function() {
+      if (emailInput.value) {
+        alert('Thank you for subscribing!');
+        emailInput.value = '';
+      } else {
+        alert('Please enter your email address');
+      }
+    });
+  </script>
+</body>
+</html>
